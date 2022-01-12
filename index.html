@@ -8,88 +8,77 @@
   <body>
     <div class="container">
       <!-- Header -->
-      <h1>Arithmetic Game</h1>
+      <h1 class="t-center">Arithmetic Game</h1>
       <!-- SetUp Form -->
-      <form method="POST" enctype="multipart/form-data">
-        <!-- Addition and Subtraction SetUp -->
-        <div class="sum">
-          <!-- Addition and Subtraction Label -->
-          <label for="sum-range">
-            <input checked type="checkbox" name="sum-option" id="sum-option" />
-            Addition / Subtraction Range:
-          </label>
-          <!-- Addition and Subtraction Input Fields -->
-          <div class="sum-fields d-flex">
-            <!-- Range of First Number in Addition and Subtraction -->
-            <div class="range-1 d-flex">
-              <!-- Lower bound of Range of First Number in Addition and Subtraction -->
-              <input class="num-1" type="number" />
-              <p>to</p>
-              <!-- Upper bound of Range of First Number in Addition and Subtraction -->
-              <input class="num-2" type="number" />
-            </div>
-            <!-- Operation Symbul in Addition and Subtraction -->
-            <p>+/-</p>
-            <!-- Range of Second Number in Addition and Subtraction -->
-            <div class="range-2 d-flex">
-              <!-- Lower bound of Range of Second Number in Addition and Subtraction -->
-              <input class="num-1" type="number" />
-              <p>to</p>
-              <!-- Upper bound of Range of Second Number in Addition and Subtraction -->
-              <input class="num-2" type="number" />
-            </div>
-          </div>
-          <p><small>Subtraction range is addition range in reverse</small></p>
-        </div>
-        <!-- Multiplication and Division SetUp -->
-        <div class="combination">
-          <!-- Multiplication and Division Label -->
-          <label for="combination-range">
-            <input checked type="checkbox" name="sum-option" id="sum-option" />
-            Multiplication / Division Range:
-          </label>
-          <!-- Multiplication and Division Input Fields -->
-          <div class="combination-fields d-flex">
-            <!-- Range of First Number in Multiplication and Division -->
-            <div class="range-1 d-flex">
-              <!-- Lower bound of Range of First Number in Multiplication and Division -->
-              <input class="num-1" type="number" />
-              <p>to</p>
-              <!-- Upper bound of Range of First Number in Multiplication and Division -->
-              <input class="num-2" type="number" />
-            </div>
-            <!-- Operation Symbul in Multiplication and Division -->
-            <p>*//</p>
-            <!-- Range of Second Number in Multiplication and Division -->
-            <div class="range-2 d-flex">
-              <!-- Lower bound of Range of Second Number in Multiplication and Division -->
-              <input class="num-1" type="number" />
-              <p>to</p>
-              <!-- Upper bound of Range of Second Number in Multiplication and Division -->
-              <input class="num-2" type="number" />
-            </div>
-          </div>
+      <form action="/game" method="POST" class="game-setup">
+        <dl>
+          <!-- Addition and Subtraction range setup -->
+          <dt class="mg-t50">
+            <!-- Addition and Subtraction range label + choose to have -->
+            <label class="bold">
+              <input checked name="sum" type="checkbox" />
+              Addition / Subtraction Range:
+            </label>
+          </dt>
+          <!-- Addition and Subtraction range input fields -->
+          <dd>
+            <!-- Addition and Subtraction first number range input fields -->
+            <input type="number" name="sum-1-min" id="num-1-min" value="2" />
+            <span class="mg-rl5">to</span>
+            <input type="number" name="sum-1-max" id="num-1-min" value="100" />
+            <span class="mg-rl10">+/-</span>
+            <!-- Addition and Subtraction second number range input fields -->
+            <input type="number" name="sum-2-min" id="num-2-min" value="2" />
+            <span class="mg-rl5">to</span>
+            <input type="number" name="sum-2-max" id="num-1-min" value="100" />
+          </dd>
           <p>
+            <!-- Addition and Subtraction comment on subtraction range -->
+            <small>Subtraction range is Addition range in reverse</small>
+          </p>
+          <!-- Multiplication and Division range setup -->
+          <dt class="mg-t50">
+            <!-- Multiplication and Division range label + choose to have -->
+            <label class="bold">
+              <input checked name="com" type="checkbox" />
+              Multiplication / Division Range:
+            </label>
+          </dt>
+          <!-- Multiplication and Division range input fields -->
+          <dd>
+            <!-- Multiplication and Division first number range input fields -->
+            <input type="number" name="com-1-min" id="com-1-min" value="2" />
+            <span class="mg-rl5">to</span>
+            <input type="number" name="com-1-max" id="com-1-min" value="12" />
+            <span class="mg-rl10">×/÷</span>
+            <!-- Multiplication and Division second number range input fields -->
+            <input type="number" name="com-2-min" id="com-2-min" value="2" />
+            <span class="mg-rl5">to</span>
+            <input type="number" name="com-2-max" id="com-1-min" value="100" />
+          </dd>
+          <p>
+            <!-- Multiplication and Division comment on division range -->
             <small>Division range is multiplication range in reverse</small>
           </p>
+        </dl>
+        <!-- Game Duration SetUp -->
+        <dt class="mg-t50">
+          <label class="bold"> Duration: </label>
+        </dt>
+        <!-- Game Duration options -->
+        <dd>
+          <select name="duration">
+            <option value="30">30 seconds</option>
+            <option value="60">60 seconds</option>
+            <option selected value="120">120 seconds</option>
+            <option value="300">300 seconds</option>
+            <option value="600">600 seconds</option>
+          </select>
+        </dd>
+        <!-- Start Game Button -->
+        <div class="mg-t50 t-center">
+          <input class="btn" type="submit" value="Start" />
         </div>
-        <!-- Duration SetUp -->
-        <div class="duration">
-          <!-- Duration Label -->
-          <label class="duration" for="duration">Duration:</label>
-          <!-- Duration Label -->
-          <div class="duration-selection">
-            <!-- Duration Selection -->
-            <select
-              class="duration-selector"
-              name="duration-selector"
-              id="duration-selector"
-            >
-              <option>120 Sec</option>
-            </select>
-          </div>
-        </div>
-        <input class="btn" type="submit" value="submit" />
       </form>
     </div>
   </body>
