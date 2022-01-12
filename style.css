@@ -22,7 +22,7 @@ body {
   border-radius: 5px;
   font-size: 16px;
   margin: 20px 0;
-  padding: 30px 15px;
+  padding: 50px 15px;
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
@@ -30,7 +30,8 @@ body {
 }
 
 .game-setup dd input {
-  background-color: aquamarine;
+  font-weight: bold;
+  background-color: #27bdaed7;
   border: none;
   border-radius: 5px;
   height: 30px;
@@ -49,13 +50,13 @@ body {
   width: 80%;
   text-align: center;
   margin: 20px auto;
-  background-color: cadetblue;
+  background-color: #1ac4a880;
   padding: 10px;
   border-radius: 5px;
 }
 
 select {
-  background-color: aquamarine;
+  background-color: #27bdaed7;
   height: 30px;
   width: 85%;
   text-align: center;
@@ -70,7 +71,7 @@ select {
 .btn {
   height: 40px;
   width: 80%;
-  background-color: cadetblue;
+  background-color: #27bdaed7;
   color: #000;
   border: none;
   border-radius: 5px;
