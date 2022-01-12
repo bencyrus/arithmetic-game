@@ -15,26 +15,91 @@ body {
 }
 
 .container {
+  width: 100%;
+  max-width: 500px;
   background-color: #fff;
   border: 0;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 16px;
   margin: 20px 0;
-  padding: 5px 15px;
+  padding: 30px 15px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.25);
+}
+
+.game-setup dd input {
+  background-color: aquamarine;
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  width: 50px;
+  text-align: center;
+}
+
+.game-setup dl p {
+  margin-left: 50px;
+}
+.game-setup label {
+  margin-left: 20px;
+}
+
+.game-setup dd {
+  width: 80%;
+  text-align: center;
+  margin: 20px auto;
+  background-color: cadetblue;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+select {
+  background-color: aquamarine;
+  height: 30px;
+  width: 85%;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
 }
 
-.d-flex {
-  display: flex;
-}
-
-.num-1,
-.num-2 {
-  background-color: aquamarine;
-  width: 50px;
-  height: 30px;
+.btn {
+  height: 40px;
+  width: 80%;
+  background-color: cadetblue;
+  color: #000;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn:focus {
+  outline: none;
+}
+.btn:hover {
+  width: 81%;
+}
+
+/** Common Styling **/
+.bold {
+  font-weight: bold;
+}
+.t-center {
+  text-align: center;
+}
+.mg-t50 {
+  margin-top: 50px;
+}
+
+.mg-rl5 {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.mg-rl10 {
+  margin-right: 10px;
+  margin-left: 10px;
 }

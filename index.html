@@ -8,14 +8,14 @@
   <body>
     <div class="container">
       <!-- Header -->
-      <h1>Arithmetic Game</h1>
+      <h1 class="t-center">Arithmetic Game</h1>
       <!-- SetUp Form -->
       <form action="/game" method="POST" class="game-setup">
         <dl>
           <!-- Addition and Subtraction range setup -->
-          <dt>
+          <dt class="mg-t50">
             <!-- Addition and Subtraction range label + choose to have -->
-            <label>
+            <label class="bold">
               <input checked name="sum" type="checkbox" />
               Addition / Subtraction Range:
             </label>
@@ -24,12 +24,12 @@
           <dd>
             <!-- Addition and Subtraction first number range input fields -->
             <input type="number" name="sum-1-min" id="num-1-min" value="2" />
-            to
+            <span class="mg-rl5">to</span>
             <input type="number" name="sum-1-max" id="num-1-min" value="100" />
-            +/-
+            <span class="mg-rl10">+/-</span>
             <!-- Addition and Subtraction second number range input fields -->
             <input type="number" name="sum-2-min" id="num-2-min" value="2" />
-            to
+            <span class="mg-rl5">to</span>
             <input type="number" name="sum-2-max" id="num-1-min" value="100" />
           </dd>
           <p>
@@ -37,9 +37,9 @@
             <small>Subtraction range is Addition range in reverse</small>
           </p>
           <!-- Multiplication and Division range setup -->
-          <dt>
+          <dt class="mg-t50">
             <!-- Multiplication and Division range label + choose to have -->
-            <label>
+            <label class="bold">
               <input checked name="com" type="checkbox" />
               Multiplication / Division Range:
             </label>
@@ -48,12 +48,12 @@
           <dd>
             <!-- Multiplication and Division first number range input fields -->
             <input type="number" name="com-1-min" id="com-1-min" value="2" />
-            to
+            <span class="mg-rl5">to</span>
             <input type="number" name="com-1-max" id="com-1-min" value="12" />
-            *//
+            <span class="mg-rl10">*//</span>
             <!-- Multiplication and Division second number range input fields -->
             <input type="number" name="com-2-min" id="com-2-min" value="2" />
-            to
+            <span class="mg-rl5">to</span>
             <input type="number" name="com-2-max" id="com-1-min" value="100" />
           </dd>
           <p>
@@ -62,9 +62,11 @@
           </p>
         </dl>
         <!-- Game Duration SetUp -->
-        <p>
-          Duration:
-          <!-- Game Duration options -->
+        <dt class="mg-t50">
+          <label class="bold"> Duration: </label>
+        </dt>
+        <!-- Game Duration options -->
+        <dd>
           <select name="duration">
             <option value="30">30 seconds</option>
             <option value="60">60 seconds</option>
@@ -72,9 +74,11 @@
             <option value="300">300 seconds</option>
             <option value="600">600 seconds</option>
           </select>
-        </p>
+        </dd>
         <!-- Start Game Button -->
-        <input type="submit" value="Start" />
+        <div class="mg-t50 t-center">
+          <input class="btn" type="submit" value="Start" />
+        </div>
       </form>
     </div>
   </body>
