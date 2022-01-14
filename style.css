@@ -40,11 +40,17 @@ body {
 }
 
 .form-control.error {
-  border: 2px solid #e74c3c;
+  border: 1px solid #e74c3c;
 }
 
-small.error {
+small.error-message {
   color: #e74c3c;
+  position: absolute;
+  visibility: hidden;
+}
+
+small.error-message.error {
+  visibility: visible;
 }
 
 .game-setup dl small {
