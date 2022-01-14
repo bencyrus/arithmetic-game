@@ -10,7 +10,7 @@
       <!-- Header -->
       <h1 class="t-center">Arithmetic Game</h1>
       <!-- SetUp Form -->
-      <form action="/game" method="POST" class="game-setup">
+      <form action="/game" method="POST" class="game-setup" id="form">
         <dl>
           <!-- Addition and Subtraction range setup -->
           <dt class="mg-t50">
@@ -23,14 +23,14 @@
           <!-- Addition and Subtraction range input fields -->
           <dd class="form-control error">
             <!-- Addition and Subtraction first number range input fields -->
-            <input type="number" name="sum-1-min" id="num-1-min" value="2" />
+            <input type="number" name="sum-1-min" id="sum-1-min" value="2" />
             <span class="mg-rl5">to</span>
-            <input type="number" name="sum-1-max" id="num-1-min" value="100" />
+            <input type="number" name="sum-1-max" id="sum-1-max" value="100" />
             <span class="mg-rl10">+/-</span>
             <!-- Addition and Subtraction second number range input fields -->
-            <input type="number" name="sum-2-min" id="num-2-min" value="2" />
+            <input type="number" name="sum-2-min" id="sum-2-min" value="2" />
             <span class="mg-rl5">to</span>
-            <input type="number" name="sum-2-max" id="num-1-min" value="100" />
+            <input type="number" name="sum-2-max" id="sum-2-max" value="100" />
           </dd>
           <p>
             <!-- Addition and Subtraction comment on subtraction range -->
@@ -51,12 +51,12 @@
             <!-- Multiplication and Division first number range input fields -->
             <input type="number" name="com-1-min" id="com-1-min" value="2" />
             <span class="mg-rl5">to</span>
-            <input type="number" name="com-1-max" id="com-1-min" value="12" />
+            <input type="number" name="com-1-max" id="com-1-max" value="12" />
             <span class="mg-rl10">×/÷</span>
             <!-- Multiplication and Division second number range input fields -->
             <input type="number" name="com-2-min" id="com-2-min" value="2" />
             <span class="mg-rl5">to</span>
-            <input type="number" name="com-2-max" id="com-1-min" value="100" />
+            <input type="number" name="com-2-max" id="com-2-max" value="100" />
           </dd>
           <p>
             <!-- Multiplication and Division comment on division range -->
