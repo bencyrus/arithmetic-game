@@ -39,7 +39,7 @@ body {
   text-align: center;
 }
 
-.game-setup dl p {
+.game-setup dl small {
   margin-left: 50px;
 }
 .game-setup label {
