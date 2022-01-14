@@ -10,7 +10,7 @@
       <!-- Header -->
       <h1 class="t-center">Arithmetic Game</h1>
       <!-- SetUp Form -->
-      <form action="/game" method="POST" class="game-setup" id="form">
+      <form method="POST" class="game-setup" id="form">
         <dl>
           <!-- Addition and Subtraction range setup -->
           <dt class="mg-t50">
@@ -21,7 +21,7 @@
             </label>
           </dt>
           <!-- Addition and Subtraction range input fields -->
-          <dd class="form-control error">
+          <dd class="form-control">
             <!-- Addition and Subtraction first number range input fields -->
             <input type="number" name="sum-1-min" id="sum-1-min" value="2" />
             <span class="mg-rl5">to</span>
@@ -81,9 +81,10 @@
         </dd>
         <!-- Start Game Button -->
         <div class="mg-t50 t-center">
-          <input class="btn" type="submit" value="Start" />
+          <button class="btn" id="submit" type="submit">Start</button>
         </div>
       </form>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
