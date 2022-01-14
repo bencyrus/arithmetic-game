@@ -39,6 +39,14 @@ body {
   text-align: center;
 }
 
+.form-control.error {
+  border: 2px solid #e74c3c;
+}
+
+small.error {
+  color: #e74c3c;
+}
+
 .game-setup dl small {
   margin-left: 50px;
 }
