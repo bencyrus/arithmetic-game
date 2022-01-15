@@ -21,23 +21,35 @@
             </label>
           </dt>
           <!-- Addition and Subtraction range input fields -->
-          <dd class="form-control">
-            <!-- Addition and Subtraction first number range input fields -->
-            <input type="number" name="sum-1-min" id="sum-1-min" value="2" />
-            <span class="mg-rl5">to</span>
-            <input type="number" name="sum-1-max" id="sum-1-max" value="100" />
-            <span class="mg-rl10">+/-</span>
-            <!-- Addition and Subtraction second number range input fields -->
-            <input type="number" name="sum-2-min" id="sum-2-min" value="2" />
-            <span class="mg-rl5">to</span>
-            <input type="number" name="sum-2-max" id="sum-2-max" value="100" />
-          </dd>
-          <p>
-            <!-- Addition and Subtraction comment on subtraction range -->
-            <small>Subtraction range is Addition range in reverse</small>
-          </p>
-          <!-- Addition and Subtraction error message -->
-          <small class="error-message error">Error message</small>
+          <div id="sum-section">
+            <dd class="form-control">
+              <!-- Addition and Subtraction first number range input fields -->
+              <input type="number" name="sum-1-min" id="sum-1-min" value="2" />
+              <span class="mg-rl5">to</span>
+              <input
+                type="number"
+                name="sum-1-max"
+                id="sum-1-max"
+                value="100"
+              />
+              <span class="mg-rl10">+/-</span>
+              <!-- Addition and Subtraction second number range input fields -->
+              <input type="number" name="sum-2-min" id="sum-2-min" value="2" />
+              <span class="mg-rl5">to</span>
+              <input
+                type="number"
+                name="sum-2-max"
+                id="sum-2-max"
+                value="100"
+              />
+            </dd>
+            <p>
+              <!-- Addition and Subtraction comment on subtraction range -->
+              <small>Subtraction range is Addition range in reverse</small>
+            </p>
+            <!-- Addition and Subtraction error message -->
+            <small class="error-message error">Error message</small>
+          </div>
           <!-- Multiplication and Division range setup -->
           <dt class="mg-t50">
             <!-- Multiplication and Division range label + choose to have -->
@@ -47,23 +59,30 @@
             </label>
           </dt>
           <!-- Multiplication and Division range input fields -->
-          <dd class="form-control">
-            <!-- Multiplication and Division first number range input fields -->
-            <input type="number" name="com-1-min" id="com-1-min" value="2" />
-            <span class="mg-rl5">to</span>
-            <input type="number" name="com-1-max" id="com-1-max" value="12" />
-            <span class="mg-rl10">×/÷</span>
-            <!-- Multiplication and Division second number range input fields -->
-            <input type="number" name="com-2-min" id="com-2-min" value="2" />
-            <span class="mg-rl5">to</span>
-            <input type="number" name="com-2-max" id="com-2-max" value="100" />
-          </dd>
-          <p>
-            <!-- Multiplication and Division comment on division range -->
-            <small>Division range is multiplication range in reverse</small>
-          </p>
-          <!-- Multiplication and Division error message -->
-          <small class="error-message">Error message</small>
+          <div id="com-section">
+            <dd class="form-control">
+              <!-- Multiplication and Division first number range input fields -->
+              <input type="number" name="com-1-min" id="com-1-min" value="2" />
+              <span class="mg-rl5">to</span>
+              <input type="number" name="com-1-max" id="com-1-max" value="12" />
+              <span class="mg-rl10">×/÷</span>
+              <!-- Multiplication and Division second number range input fields -->
+              <input type="number" name="com-2-min" id="com-2-min" value="2" />
+              <span class="mg-rl5">to</span>
+              <input
+                type="number"
+                name="com-2-max"
+                id="com-2-max"
+                value="100"
+              />
+            </dd>
+            <p>
+              <!-- Multiplication and Division comment on division range -->
+              <small>Division range is multiplication range in reverse</small>
+            </p>
+            <!-- Multiplication and Division error message -->
+            <small class="error-message">Error message</small>
+          </div>
         </dl>
         <!-- Game Duration SetUp -->
         <dt class="mg-t50">
