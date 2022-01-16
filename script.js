@@ -1,19 +1,10 @@
 const form = document.getElementById("form");
-const sum_1_min = document.getElementById("sum-1-min");
-const sum_1_max = document.getElementById("sum-1-max");
-const sum_2_min = document.getElementById("sum-2-min");
-const sum_2_max = document.getElementById("sum-2-max");
-const com_1_min = document.getElementById("com-1-min");
-const com_1_max = document.getElementById("com-1-max");
-const com_2_min = document.getElementById("com-2-min");
-const com_2_max = document.getElementById("com-2-max");
-const sum_section = document.getElementById("sum-section");
-const com_section = document.getElementById("com-section");
-
-const sumInputFields = sum_section
+const sumInputFields = document
+  .getElementById("sum-section")
   .querySelector(".form-control")
   .querySelectorAll("input");
-const comInputFields = com_section
+const comInputFields = document
+  .getElementById("com-section")
   .querySelector(".form-control")
   .querySelectorAll("input");
 
