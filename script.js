@@ -27,6 +27,17 @@ function showError(input, message) {
   errorMessage.innerText = message;
 }
 
+// Check Required
+function checkRequired(inputArray) {
+  inputArray.forEach((input) => {
+    input.forEach((field) => {
+      if (field.value === "") {
+        showError(field, "Input is required");
+      }
+    });
+  });
+}
+
 // Check for positive
 function isPositive(number) {
   console.log(typeof number);
@@ -39,53 +50,67 @@ function submit(input) {
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  if (
-    sumInputFields[0].value === "" ||
-    sumInputFields[1].value === "" ||
-    sumInputFields[2].value === "" ||
-    sumInputFields[3].value === ""
-  ) {
-    showError(sumInputFields[0], "input is required");
-  } else if (
-    parseInt(sumInputFields[0].value) > parseInt(sumInputFields[1].value) ||
-    parseInt(sumInputFields[2].value) > parseInt(sumInputFields[3].value)
-  ) {
-    showError(
+  checkRequired([
+    [
       sumInputFields[0],
-      "Second number in each range must be larger than the first number"
-    );
-  } else if (
-    !isPositive(sumInputFields[0].value) ||
-    !isPositive(sumInputFields[1].value) ||
-    !isPositive(sumInputFields[2].value) ||
-    !isPositive(sumInputFields[3].value)
-  ) {
-    showError(sumInputFields[0], "only integers larger than 0 are accepted");
-  } else {
-    submit(sumInputFields[0]);
-  }
-
-  if (
-    comInputFields[0].value === "" ||
-    comInputFields[1].value === "" ||
-    comInputFields[2].value === "" ||
-    comInputFields[3].value === ""
-  ) {
-    showError(comInputFields[0], "input is required");
-  } else if (
-    parseInt(comInputFields[0].value) > parseInt(comInputFields[1].value) ||
-    parseInt(comInputFields[2].value) > parseInt(comInputFields[3].value)
-  ) {
-    showError(
+      sumInputFields[1],
+      sumInputFields[2],
+      sumInputFields[3],
+    ],
+    [
       comInputFields[0],
-      "Second number in each range must be larger than the first number"
-    );
-  } else if (
-    !isPositive(comInputFields[0].value) ||
-    !isPositive(comInputFields[1].value) ||
-    !isPositive(comInputFields[2].value) ||
-    !isPositive(comInputFields[3].value)
-  ) {
-    showError(comInputFields[0], "only integers larger than 0 are accepted");
-  }
+      comInputFields[1],
+      comInputFields[2],
+      comInputFields[3],
+    ],
+  ]);
+  // if (
+  //   sumInputFields[0].value === "" ||
+  //   sumInputFields[1].value === "" ||
+  //   sumInputFields[2].value === "" ||
+  //   sumInputFields[3].value === ""
+  // ) {
+  //   showError(sumInputFields[0], "input is required");
+  // } else if (
+  //   parseInt(sumInputFields[0].value) > parseInt(sumInputFields[1].value) ||
+  //   parseInt(sumInputFields[2].value) > parseInt(sumInputFields[3].value)
+  // ) {
+  //   showError(
+  //     sumInputFields[0],
+  //     "Maximum of each number must be greater than it's minimum"
+  //   );
+  // } else if (
+  //   !isPositive(sumInputFields[0].value) ||
+  //   !isPositive(sumInputFields[1].value) ||
+  //   !isPositive(sumInputFields[2].value) ||
+  //   !isPositive(sumInputFields[3].value)
+  // ) {
+  //   showError(sumInputFields[0], "only integers larger than 0 are accepted");
+  // } else {
+  //   submit(sumInputFields[0]);
+  // }
+
+  // if (
+  //   comInputFields[0].value === "" ||
+  //   comInputFields[1].value === "" ||
+  //   comInputFields[2].value === "" ||
+  //   comInputFields[3].value === ""
+  // ) {
+  //   showError(comInputFields[0], "input is required");
+  // } else if (
+  //   parseInt(comInputFields[0].value) > parseInt(comInputFields[1].value) ||
+  //   parseInt(comInputFields[2].value) > parseInt(comInputFields[3].value)
+  // ) {
+  //   showError(
+  //     comInputFields[0],
+  //     "Maximum of each number must be greater than it's minimum"
+  //   );
+  // } else if (
+  //   !isPositive(comInputFields[0].value) ||
+  //   !isPositive(comInputFields[1].value) ||
+  //   !isPositive(comInputFields[2].value) ||
+  //   !isPositive(comInputFields[3].value)
+  // ) {
+  //   showError(comInputFields[0], "only integers larger than 0 are accepted");
+  // }
 });
