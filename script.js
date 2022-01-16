@@ -29,6 +29,7 @@ function showError(input, message) {
 
 // Check for positive
 function isPositive(number) {
+  console.log(typeof number);
   return number > 0;
 }
 
@@ -45,6 +46,14 @@ form.addEventListener("submit", function (e) {
     sumInputFields[3].value === ""
   ) {
     showError(sumInputFields[0], "input is required");
+  } else if (
+    parseInt(sumInputFields[0].value) > parseInt(sumInputFields[1].value) ||
+    parseInt(sumInputFields[2].value) > parseInt(sumInputFields[3].value)
+  ) {
+    showError(
+      sumInputFields[0],
+      "Second number in each range must be larger than the first number"
+    );
   } else if (
     !isPositive(sumInputFields[0].value) ||
     !isPositive(sumInputFields[1].value) ||
@@ -63,6 +72,14 @@ form.addEventListener("submit", function (e) {
     comInputFields[3].value === ""
   ) {
     showError(comInputFields[0], "input is required");
+  } else if (
+    parseInt(comInputFields[0].value) > parseInt(comInputFields[1].value) ||
+    parseInt(comInputFields[2].value) > parseInt(comInputFields[3].value)
+  ) {
+    showError(
+      comInputFields[0],
+      "Second number in each range must be larger than the first number"
+    );
   } else if (
     !isPositive(comInputFields[0].value) ||
     !isPositive(comInputFields[1].value) ||
