@@ -29,7 +29,7 @@ function showError(input, message) {
   errorMessage.innerText = message;
 }
 
-// Check Required
+// Check Required for input fields in each section
 function checkRequired(inputArray) {
   inputArray.forEach((input) => {
     input.forEach((field) => {
@@ -53,6 +53,7 @@ function submit(input) {
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
+  // It gets a lists of "list of inputs". each section that contains inputs must be given as a list of inputs
   checkRequired([sumInputFields, comInputFields]);
 
   // if (
