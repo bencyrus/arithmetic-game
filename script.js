@@ -25,6 +25,7 @@ function showError(input, message) {
   const errorMessage =
     formControl.parentElement.querySelector("#error-message");
   formControl.className = "form-control error";
+  input.className = "error";
   errorMessage.className = "error";
   errorMessage.innerText = message;
 }

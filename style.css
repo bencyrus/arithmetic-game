@@ -53,6 +53,10 @@ small#error-message.error {
   visibility: visible;
 }
 
+input.error {
+  border: 1px solid #e74c3c !important;
+}
+
 .game-setup dl small {
   margin-left: 50px;
 }
