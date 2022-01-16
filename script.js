@@ -17,6 +17,8 @@ const comInputFields = com_section
   .querySelector(".form-control")
   .querySelectorAll("input");
 
+console.log(sumInputFields, comInputFields);
+
 // Show input error message
 function showError(input, message) {
   const formControl = input.parentElement;
@@ -50,20 +52,9 @@ function submit(input) {
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  checkRequired([
-    [
-      sumInputFields[0],
-      sumInputFields[1],
-      sumInputFields[2],
-      sumInputFields[3],
-    ],
-    [
-      comInputFields[0],
-      comInputFields[1],
-      comInputFields[2],
-      comInputFields[3],
-    ],
-  ]);
+
+  checkRequired([sumInputFields, comInputFields]);
+
   // if (
   //   sumInputFields[0].value === "" ||
   //   sumInputFields[1].value === "" ||
