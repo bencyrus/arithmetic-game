@@ -27,6 +27,11 @@ function showError(input, message) {
   errorMessage.innerText = message;
 }
 
+// Check for positive
+function isPositive(number) {
+  return number > 0;
+}
+
 function submit(input) {
   console.log("successfull");
 }
@@ -40,6 +45,13 @@ form.addEventListener("submit", function (e) {
     sumInputFields[3].value === ""
   ) {
     showError(sumInputFields[0], "input is required");
+  } else if (
+    !isPositive(sumInputFields[0].value) ||
+    !isPositive(sumInputFields[1].value) ||
+    !isPositive(sumInputFields[2].value) ||
+    !isPositive(sumInputFields[3].value)
+  ) {
+    showError(sumInputFields[0], "only integers larger than 0 are accepted");
   } else {
     submit(sumInputFields[0]);
   }
@@ -51,7 +63,12 @@ form.addEventListener("submit", function (e) {
     comInputFields[3].value === ""
   ) {
     showError(comInputFields[0], "input is required");
-  } else {
-    submit(comInputFields[0]);
+  } else if (
+    !isPositive(comInputFields[0].value) ||
+    !isPositive(comInputFields[1].value) ||
+    !isPositive(comInputFields[2].value) ||
+    !isPositive(comInputFields[3].value)
+  ) {
+    showError(comInputFields[0], "only integers larger than 0 are accepted");
   }
 });
