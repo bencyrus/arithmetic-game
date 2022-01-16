@@ -17,8 +17,6 @@ const comInputFields = com_section
   .querySelector(".form-control")
   .querySelectorAll("input");
 
-console.log(sumInputFields, comInputFields);
-
 // Show input error message
 function showError(input, message) {
   const formControl = input.parentElement;
@@ -41,69 +39,51 @@ function checkRequired(inputArray) {
   });
 }
 
-// Check for positive
-function isPositive(number) {
-  console.log(typeof number);
-  return number > 0;
+// Check Number Range for input fields in each section
+// The min and max values are optional but pre-defined at 1, 99999
+function checkNumberRange(inputArray, min = 1, max = 99999) {
+  inputArray.forEach((input) => {
+    input.forEach((number) => {
+      if (number.value < min || number.value > max) {
+        showError(
+          number,
+          `Only numbers between ${min} and ${max} are accepted`
+        );
+      }
+    });
+  });
 }
 
-function submit(input) {
-  console.log("successfull");
+// Checks for Max value being greater than Min value
+function checkMaxGTMin(inputArray) {
+  inputArray.forEach((input) => {
+    if (parseInt(input[0].value) >= parseInt(input[1].value)) {
+      showError(
+        input[1],
+        "Maximum of each number must be greater than it's minimum"
+      );
+    }
+    if (parseInt(input[2].value) >= parseInt(input[3].value)) {
+      showError(
+        input[3],
+        "Maximum of each number must be greater than it's minimum"
+      );
+    }
+  });
 }
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
+  // It gets a list of "list of inputs", optional min and  max values (if not specified, min is 1 and max is 99999).
+  // each section that requires its inputs to be within a specific number range must be given as a part of an input list.
+  // The list must be followed by the min and max values
+  checkNumberRange([sumInputFields, comInputFields], 1, 99999);
 
-  // It gets a lists of "list of inputs". each section that contains inputs must be given as a list of inputs
+  // It gets a list of "list of inputs".
+  // each section that requires to be filled must be given as an element of the list
   checkRequired([sumInputFields, comInputFields]);
 
-  // if (
-  //   sumInputFields[0].value === "" ||
-  //   sumInputFields[1].value === "" ||
-  //   sumInputFields[2].value === "" ||
-  //   sumInputFields[3].value === ""
-  // ) {
-  //   showError(sumInputFields[0], "input is required");
-  // } else if (
-  //   parseInt(sumInputFields[0].value) > parseInt(sumInputFields[1].value) ||
-  //   parseInt(sumInputFields[2].value) > parseInt(sumInputFields[3].value)
-  // ) {
-  //   showError(
-  //     sumInputFields[0],
-  //     "Maximum of each number must be greater than it's minimum"
-  //   );
-  // } else if (
-  //   !isPositive(sumInputFields[0].value) ||
-  //   !isPositive(sumInputFields[1].value) ||
-  //   !isPositive(sumInputFields[2].value) ||
-  //   !isPositive(sumInputFields[3].value)
-  // ) {
-  //   showError(sumInputFields[0], "only integers larger than 0 are accepted");
-  // } else {
-  //   submit(sumInputFields[0]);
-  // }
-
-  // if (
-  //   comInputFields[0].value === "" ||
-  //   comInputFields[1].value === "" ||
-  //   comInputFields[2].value === "" ||
-  //   comInputFields[3].value === ""
-  // ) {
-  //   showError(comInputFields[0], "input is required");
-  // } else if (
-  //   parseInt(comInputFields[0].value) > parseInt(comInputFields[1].value) ||
-  //   parseInt(comInputFields[2].value) > parseInt(comInputFields[3].value)
-  // ) {
-  //   showError(
-  //     comInputFields[0],
-  //     "Maximum of each number must be greater than it's minimum"
-  //   );
-  // } else if (
-  //   !isPositive(comInputFields[0].value) ||
-  //   !isPositive(comInputFields[1].value) ||
-  //   !isPositive(comInputFields[2].value) ||
-  //   !isPositive(comInputFields[3].value)
-  // ) {
-  //   showError(comInputFields[0], "only integers larger than 0 are accepted");
-  // }
+  // It gets a list of "list of inputs", then checks for each number pair (each number range) to make sure the second number
+  // in pair is greater than the first one
+  checkMaxGTMin([sumInputFields, comInputFields]);
 });
