@@ -43,13 +43,13 @@ body {
   border: 1px solid #e74c3c;
 }
 
-small.error-message {
+small#error-message {
   color: #e74c3c;
   position: absolute;
   visibility: hidden;
 }
 
-small.error-message.error {
+small#error-message.error {
   visibility: visible;
 }
 
