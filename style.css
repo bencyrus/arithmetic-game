@@ -39,7 +39,25 @@ body {
   text-align: center;
 }
 
-.game-setup dl p {
+.form-control.error {
+  border: 1px solid #e74c3c;
+}
+
+small#error-message {
+  color: #e74c3c;
+  position: absolute;
+  visibility: hidden;
+}
+
+small#error-message.error {
+  visibility: visible;
+}
+
+input.error {
+  border: 1px solid #e74c3c !important;
+}
+
+.game-setup dl small {
   margin-left: 50px;
 }
 .game-setup label {
