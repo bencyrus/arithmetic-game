@@ -16,6 +16,7 @@ body {
 
 .container {
   width: 100%;
+  min-height: 500px;
   max-width: 500px;
   background-color: #fff;
   border: 0;
@@ -103,7 +104,53 @@ select {
   width: 81%;
 }
 
+/** GameTime page styles **/
+#gametime .container .game-details {
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#gametime .container .question {
+  background-color: rgb(240, 240, 240);
+  padding: 30px;
+  font-size: 35px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 35%;
+  border-radius: 5px;
+}
+#gametime .container .question .equal-sign {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button,
+input[type="number"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+#gametime .container .question input {
+  background-color: #1ac4a880;
+  font-size: 35px;
+  text-align: center;
+  border: 0px solid;
+  border-radius: 5px;
+  height: 50px;
+  width: 200px;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
 /** Common Styling **/
+textarea:focus,
+input:focus {
+  outline: none;
+}
 .bold {
   font-weight: bold;
 }
