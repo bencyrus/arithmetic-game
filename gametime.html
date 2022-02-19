@@ -4,13 +4,23 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
+    <script>
+      const gameSet = {
+        duration: 120,
+        questions: [
+          [80, 20, "+", 100],
+          [30, 10, "-", 20],
+          [50, 2, "/", 25],
+        ],
+      };
+    </script>
   </head>
   <body id="gametime">
     <div class="container">
       <div class="game-details">
         <div class="count-down">
           <span class="title">Seconds Left: </span>
-          <span class="seconds-left">120</span>
+          <span class="seconds-left">0</span>
         </div>
         <div class="score">
           <span class="title">Score: </span>
@@ -24,5 +34,6 @@
       </div>
     </div>
     <script src="script.js"></script>
+    <script src="gametimeScript.js"></script>
   </body>
 </html>
