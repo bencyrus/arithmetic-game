@@ -57,5 +57,6 @@ answer.addEventListener("input", function (e) {
     score += 1;
     currentScore.innerHTML = score;
     pickQuestion(questions);
+    answer.value = "";
   }
 });
