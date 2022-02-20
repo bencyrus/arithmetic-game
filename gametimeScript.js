@@ -34,6 +34,10 @@ setInterval(function () {
   }
   if (time === 0) {
     console.log("Finished");
+    document
+      .querySelector(".question")
+      .querySelector(".final-score").innerHTML = score;
+
     document.querySelector(".question").querySelector(".prompt").className =
       "prompt ft-30";
     document.querySelector(".question").querySelector(".prompt").innerHTML =
