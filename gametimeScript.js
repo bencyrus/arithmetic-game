@@ -49,6 +49,12 @@ setInterval(function () {
     document
       .querySelector(".question")
       .querySelector(".final-score").className = "final-score d-block";
+    document
+      .querySelector(".end-game")
+      .querySelectorAll("div")
+      .forEach((element) => {
+        element.className = "d-block";
+      });
   }
 }, 1000);
 

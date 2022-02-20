@@ -159,6 +159,7 @@ input[type="number"] {
 }
 
 #gametime .container .end-game div {
+  display: none;
   width: 50%;
   text-align: center;
 }
