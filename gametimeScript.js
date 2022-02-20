@@ -1,6 +1,5 @@
 let questions = gameSet.questions;
 let time = gameSet.duration;
-let tempQuestions = questions;
 let prompt = document.querySelector(".prompt");
 let answer = document.querySelector(".answer");
 let score = 0;
@@ -56,17 +55,3 @@ answer.addEventListener("input", function (e) {
     pickQuestion(questions);
   }
 });
-
-// tempQuestions.forEach((element) => {
-//   console.log(element[0], element[1], element[2], element[3]);
-//   answer.addEventListener("input", function (e) {
-//     if (compareAnswer(parseInt(answer.value), question) === true) {
-//       score += 1;
-//     }
-//   });
-//   console.log(score);
-// });
-
-// answer.addEventListener("input", function (e) {
-//     console.log(compareAnswer(parseInt(answer.value), question));
-// });
