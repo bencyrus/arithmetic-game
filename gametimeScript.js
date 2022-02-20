@@ -35,6 +35,17 @@ setInterval(function () {
   }
   if (time === 0) {
     console.log("Finished");
+    document.querySelector(".question").querySelector(".prompt").className =
+      "prompt ft-30";
+    document.querySelector(".question").querySelector(".prompt").innerHTML =
+      "Your Score:";
+    document.querySelector(".question").querySelector(".equal-sign").className =
+      "equal-sign d-none";
+    document.querySelector(".question").querySelector("input").className =
+      "answer d-none";
+    document
+      .querySelector(".question")
+      .querySelector(".final-score").className = "final-score d-block";
   }
 }, 1000);
 

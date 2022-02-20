@@ -118,7 +118,7 @@ select {
   display: flex;
   align-items: center;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-top: 35%;
   border-radius: 5px;
 }
@@ -146,6 +146,10 @@ input[type="number"] {
   -webkit-appearance: none;
 }
 
+#gametime .container .question .final-score {
+  display: none;
+}
+
 /** Common Styling **/
 textarea:focus,
 input:focus {
@@ -168,4 +172,13 @@ input:focus {
 .mg-rl10 {
   margin-right: 10px;
   margin-left: 10px;
+}
+.ft-30 {
+  font-size: 30px;
+}
+.d-block {
+  display: block !important;
+}
+.d-none {
+  display: none;
 }
