@@ -2,16 +2,16 @@ from django.db import models
 
 class QuestionsList(models.Model):
     addExists = models.BooleanField()
-    rangeAddNum11 = models.IntegerField()
-    rangeAddNum12 = models.IntegerField()
-    rangeAddNum21 = models.IntegerField()
-    rangeAddNum22 = models.IntegerField()
+    rangeAddNum11 = models.IntegerField(null=True)
+    rangeAddNum12 = models.IntegerField(null=True)
+    rangeAddNum21 = models.IntegerField(null=True)
+    rangeAddNum22 = models.IntegerField(null=True)
 
     mulsExists = models.BooleanField()
-    rangeMulNum11 = models.IntegerField()
-    rangeMulNum12 = models.IntegerField()
-    rangeMulNum21 = models.IntegerField()
-    rangeMulNum22 = models.IntegerField()
+    rangeMulNum11 = models.IntegerField(null=True)
+    rangeMulNum12 = models.IntegerField(null=True)
+    rangeMulNum21 = models.IntegerField(null=True)
+    rangeMulNum22 = models.IntegerField(null=True)
     
     duration = models.IntegerField()
 
