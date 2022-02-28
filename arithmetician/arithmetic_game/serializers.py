@@ -14,7 +14,7 @@ class QuestionsListSerializer(serializers.ModelSerializer):
             "rangeMulNum12",
             "rangeMulNum21",
             "rangeMulNum11",
-            "rangeMulNum22"
+            "rangeMulNum22",
             "duration",
         ]
         
