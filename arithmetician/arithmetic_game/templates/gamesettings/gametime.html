@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+    <script>
+      const gameSet = {
+        duration: 10,
+        questions: [
+          [80, 20, "+", 100],
+          [30, 10, "-", 20],
+          [50, 2, "/", 25],
+          [4, 2, "*", 8],
+          [9, 5, "+", 14],
+          [78, 45, "-", 33],
+          [99, 3, "/", 33],
+          [11, 8, "*", 88],
+          [36, 2, "/", 18],
+          [62, 9, "-", 53],
+        ],
+      };
+    </script>
+  </head>
+  <body id="gametime">
+    <div class="container">
+      <div class="game-details">
+        <div class="count-down">
+          <span class="title">Seconds Left: </span>
+          <span class="seconds-left">0</span>
+        </div>
+        <div class="score">
+          <span class="title">Score: </span>
+          <span class="score-number">0</span>
+        </div>
+      </div>
+      <div class="question">
+        <div class="prompt">85 + 85</div>
+        <span class="equal-sign">=</span>
+        <input type="number" class="answer" autofocus />
+        <div class="final-score">10</div>
+      </div>
+      <div class="end-game">
+        <div>
+          <button class="btn" id="try-again" type="submit">Try Again</button>
+        </div>
+        <div>
+          <button class="btn" id="try-again" type="submit">
+            Reset Numbers
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="gametimeScript.js"></script>
+  </body>
+</html>
