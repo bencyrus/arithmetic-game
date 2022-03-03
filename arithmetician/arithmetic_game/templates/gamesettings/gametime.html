@@ -1,24 +1,19 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="{% static 'styles/style.css' %}"
+    />
     <title>Document</title>
     <script>
       const gameSet = {
-        duration: 10,
-        questions: [
-          [80, 20, "+", 100],
-          [30, 10, "-", 20],
-          [50, 2, "/", 25],
-          [4, 2, "*", 8],
-          [9, 5, "+", 14],
-          [78, 45, "-", 33],
-          [99, 3, "/", 33],
-          [11, 8, "*", 88],
-          [36, 2, "/", 18],
-          [62, 9, "-", 53],
-        ],
+        duration: {{ duration }},
+        questions: {{ questions|safe }},
       };
     </script>
   </head>
@@ -51,6 +46,6 @@
         </div>
       </div>
     </div>
-    <script src="gametimeScript.js"></script>
+    <script src="{% static 'scripts/gametimeScript.js' %}"></script>
   </body>
 </html>

@@ -33,7 +33,6 @@ setInterval(function () {
     secondsLeft.innerHTML = time;
   }
   if (time === 0) {
-    console.log("Finished");
     document
       .querySelector(".question")
       .querySelector(".final-score").innerHTML = score;
