@@ -1,3 +1,4 @@
+from logging import Logger
 from random import randrange
 from statistics import mode
 from django.db import models
@@ -23,7 +24,7 @@ class QuestionSet(models.Model):
     def __str__(self):
         return 'Question List {}'.format(self.id)
 
-    @property
+
     def numGnerator(self, min1, max1, min2, max2, sign):
         num1 = randrange(min1, max1, 1)
         num2 = randrange(min2, max2, 1)
