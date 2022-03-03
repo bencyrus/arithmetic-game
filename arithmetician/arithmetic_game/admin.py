@@ -1,5 +1,5 @@
 from django.contrib import admin
 
-from .models import QuestionsList
+from .models import QuestionSet
 
-admin.site.register(QuestionsList)
+admin.site.register(QuestionSet)

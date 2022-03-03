@@ -1,8 +1,14 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="{% static 'styles/style.css' %}"
+    />
     <title>Arithmetic Game</title>
   </head>
   <body>
@@ -110,6 +116,6 @@
         </div>
       </form>
     </div>
-    <script src="script.js"></script>
+    <script src="{% static 'scripts/script.js' %}"></script>
   </body>
 </html>

@@ -1,0 +1,198 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f4f4;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  min-height: 742px;
+  max-width: 500px;
+  background-color: #fff;
+  border: 0;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 20px 0;
+  padding: 50px 15px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.25);
+}
+
+.game-setup dd input {
+  font-weight: bold;
+  background-color: #27bdaed7;
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  width: 50px;
+  text-align: center;
+}
+
+.form-control.error {
+  border: 1px solid #e74c3c;
+}
+
+small#error-message {
+  color: #e74c3c;
+  position: absolute;
+  visibility: hidden;
+}
+
+small#error-message.error {
+  visibility: visible;
+}
+
+input.error {
+  border: 1px solid #e74c3c !important;
+}
+
+.game-setup dl small {
+  margin-left: 50px;
+}
+.game-setup label {
+  margin-left: 20px;
+}
+
+.game-setup dd {
+  width: 80%;
+  text-align: center;
+  margin: 20px auto;
+  background-color: #1ac4a880;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+select {
+  background-color: #27bdaed7;
+  height: 30px;
+  width: 85%;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.btn {
+  height: 40px;
+  width: 80%;
+  background-color: #27bdaed7;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn:focus {
+  outline: none;
+}
+.btn:hover {
+  width: 81%;
+}
+
+/** GameTime page styles **/
+#gametime .container .game-details {
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#gametime .container .question {
+  background-color: rgb(240, 240, 240);
+  padding: 30px;
+  font-size: 35px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 35%;
+  border-radius: 5px;
+}
+#gametime .container .question .equal-sign {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button,
+input[type="number"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+#gametime .container .question input {
+  background-color: #1ac4a880;
+  font-size: 35px;
+  text-align: center;
+  border: 0px solid;
+  border-radius: 5px;
+  height: 50px;
+  width: 200px;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+#gametime .container .question .final-score {
+  display: none;
+}
+
+#gametime .container .end-game {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 120px;
+}
+
+#gametime .container .end-game div {
+  display: none;
+  width: 50%;
+  text-align: center;
+}
+
+/** Common Styling **/
+textarea:focus,
+input:focus {
+  outline: none;
+}
+.bold {
+  font-weight: bold;
+}
+.t-center {
+  text-align: center;
+}
+.mg-t50 {
+  margin-top: 50px;
+}
+
+.mg-rl5 {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.mg-rl10 {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.ft-30 {
+  font-size: 30px;
+}
+.d-block {
+  display: block !important;
+}
+.d-none {
+  display: none;
+}

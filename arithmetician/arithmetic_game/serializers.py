@@ -1,9 +1,9 @@
 from rest_framework import serializers
-from .models import QuestionsList
+from .models import QuestionSet
 
 class QuestionsListSerializer(serializers.ModelSerializer):
     class Meta:
-        model = QuestionsList
+        model = QuestionSet
         fields = [
             "addExists",
             "rangeAddNum12",

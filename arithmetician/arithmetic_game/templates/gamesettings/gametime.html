@@ -1,8 +1,14 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="{% static 'styles/style.css' %}"
+    />
     <title>Document</title>
     <script>
       const gameSet = {
@@ -51,6 +57,6 @@
         </div>
       </div>
     </div>
-    <script src="gametimeScript.js"></script>
+    <script src="{% static 'scripts/gametimeScript.js' %}"></script>
   </body>
 </html>
