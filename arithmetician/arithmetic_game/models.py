@@ -3,19 +3,22 @@ from statistics import mode
 from django.db import models
 
 class QuestionSet(models.Model):
-    addExists = models.BooleanField()
+    addExists = models.BooleanField(default=False)
     rangeAddNum11 = models.IntegerField(null=True)
     rangeAddNum12 = models.IntegerField(null=True)
     rangeAddNum21 = models.IntegerField(null=True)
     rangeAddNum22 = models.IntegerField(null=True)
 
-    mulsExists = models.BooleanField()
+    mulsExists = models.BooleanField(default=False)
     rangeMulNum11 = models.IntegerField(null=True)
     rangeMulNum12 = models.IntegerField(null=True)
     rangeMulNum21 = models.IntegerField(null=True)
     rangeMulNum22 = models.IntegerField(null=True)
     
     duration = models.IntegerField()
+
+    # Must change variable name to something else as it includes duration too
+    questions = models.JSONField(null=True)
 
     def __str__(self):
         return 'Question List {}'.format(self.id)
@@ -78,7 +81,7 @@ class QuestionSet(models.Model):
                 questionList.append(self.genQSet(sign))
         return questionList
     
-    questions = models.JSONField({'duration': duration, 'questions': QBuilder})
+    
 
         # Recipe:
         # For each of the checked fields, randomly generate questions based on number range
