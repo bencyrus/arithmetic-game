@@ -1,6 +1,4 @@
-from logging import Logger
 from random import randrange
-from statistics import mode
 from django.db import models
 
 class QuestionSet(models.Model):
@@ -60,11 +58,11 @@ class QuestionSet(models.Model):
         elif sign == 2:
             num1, num2 = self.numGnerator(self.rangeMulNum11, self.rangeMulNum12, self.rangeMulNum21, self.rangeMulNum22, sign)
 
-            return [num1, num2, '*', (num1 * num2)]
+            return [num1, num2, '×', (num1 * num2)]
         else:
             num1, num2 = self.numGnerator(self.rangeMulNum11, self.rangeMulNum12, self.rangeMulNum21, self.rangeMulNum22, sign)
 
-            return [num1, num2, '/', int((num1 / num2))]
+            return [num1, num2, '÷', int((num1 / num2))]
     
     def QBuilder(self):
         questionList = []
