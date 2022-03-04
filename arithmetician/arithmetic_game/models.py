@@ -1,6 +1,4 @@
-from logging import Logger
 from random import randrange
-from statistics import mode
 from django.db import models
 
 class QuestionSet(models.Model):
